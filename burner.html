@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>🔥 Komodo Burner 🔥</title>
+    <script type="text/javascript" src="burner.bundle.js"></script>
+  </head>
+  <body>
+
+
+    <form id="form">
+      Transaction ID: <input type="text" name="txid"><br><br>
+      Previous Output Index: <input type="number" name="prevOutIndex"><br><br>
+      Previous Output "scriptPubKey": <input type="text" name="redeemScript"><br><br>
+      Value to be burned: <input type="number" step="0.00000001" name="outputValue"><br><br>
+      Miner fee to be deducted from value: <input type="number" step="0.00000001" name="fee"><br><br>
+      Text to be included in the transaction: <input type="text" name="opreturnData"><br><br>
+      Private Key (WIF): <input type="password" name="privateKey"><br><br>
+      Non-overwinter? (OOT/ZILLA): <input type="checkbox" name="isOverwintered"><br><br>
+      <input type="button" onclick="process()" value="Submit">
+    </form>
+
+
+  </body>
+</html>

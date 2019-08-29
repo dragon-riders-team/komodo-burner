@@ -1,0 +1,19 @@
+{
+  "name": "bitgo-multisig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitgo-utxo-lib": "git+https://github.com/BitGo/bitgo-utxo-lib.git",
+    "browserify": "^16.3.0"
+  },
+  "browser": {
+  }
+}
+
