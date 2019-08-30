@@ -80,6 +80,7 @@ function buildTx(formData) {
   // sign transaction
   builder.sign(0, keyPair, undefined, undefined, outputValueSat)
   let signedTx = builder.build()
-  console.log("signedTx:")
-  console.log(signedTx.toHex())
+
+  // return in hex format
+  return signedTx.toHex()
 }
