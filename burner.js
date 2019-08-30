@@ -35,7 +35,6 @@ const komodoNonSaplingNetwork = {
 window.process = function() {
   var formData = {}
   let form = document.getElementById("form")
-  console.log(form.elements)
   for (let i in form.elements) {
     let name = form.elements[i].name
     let value = form.elements[i].value
