@@ -31,8 +31,9 @@ const komodoNonSaplingNetwork = {
   wif: 0xbc,
 }
 
-// receive form data
+// receive data, process, and write to output text box
 window.process = function() {
+  document.getElementById("text").innerText=""
   var formData = {}
   let form = document.getElementById("form")
   for (let i in form.elements) {
