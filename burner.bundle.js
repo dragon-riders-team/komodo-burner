@@ -75,8 +75,8 @@ function buildTx(formData) {
   // add output
   let dataBuffer = Buffer.from(fd.opreturnData)
   let dataScript = bitGoUTXO.script.nullData.output.encode(dataBuffer)
-  let outputValueSat = Number(fd.outputValue) * 100000000
-  let feeSat = Number(fd.fee) * 100000000
+  let outputValueSat = Math.round(Number(fd.outputValue) * 100000000)
+  let feeSat = Math.round(Number(fd.fee) * 100000000)
   builder.addOutput(dataScript, (outputValueSat - feeSat))
 
   // sign transaction
