@@ -37,7 +37,6 @@ const komodoNonSaplingNetwork = {
 window.process = function() {
   var formData = {}
   let form = document.getElementById("form")
-  console.log(form.elements)
   for (let i in form.elements) {
     let name = form.elements[i].name
     let value = form.elements[i].value
@@ -48,6 +47,7 @@ window.process = function() {
     }
   }
   let tx = buildTx(formData)
+  document.getElementById("text").innerText=tx
 }
 
 function buildTx(formData) {
@@ -82,8 +82,9 @@ function buildTx(formData) {
   // sign transaction
   builder.sign(0, keyPair, undefined, undefined, outputValueSat)
   let signedTx = builder.build()
-  console.log("signedTx:")
-  console.log(signedTx.toHex())
+
+  // return in hex format
+  return signedTx.toHex()
 }
 
 }).call(this,require("buffer").Buffer)

@@ -45,6 +45,7 @@ window.process = function() {
     }
   }
   let tx = buildTx(formData)
+  document.getElementById("text").innerText=tx
 }
 
 function buildTx(formData) {
