@@ -66,7 +66,6 @@ function buildTx(formData) {
   // data
   let keyPair = bitGoUTXO.ECPair.fromWIF(fd.privateKey, selectedNetwork)
   let hashType = bitGoUTXO.Transaction.SIGHASH_ALL
-  let redeemScript = Buffer.from(fd.redeemScript, 'hex')
 
   // add input
   builder.addInput(fd.txid, Number(fd.prevOutIndex))
